@@ -1,15 +1,8 @@
 {
   "datasource": null,
-  "gridPos": {
-    "h": 24,
-    "w": 5,
-    "x": 0,
-    "y": 0
-  },
-  "id": 3,
   "links": [],
   "options": {
-    "folderId": 3,
+    "folderId": 30,
     "maxItems": 30,
     "query": "REPLACE_WITH_NAT_LANG",
     "showHeadings": false,

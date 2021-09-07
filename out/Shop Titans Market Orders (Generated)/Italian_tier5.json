@@ -21,8 +21,8 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 17,
-  "iteration": 1630975744501,
+  "id": 20,
+  "iteration": 1630975784958,
   "links": [],
   "panels": [
     {
@@ -42,7 +42,7 @@
       "fillGradient": 0,
       "gridPos": {
         "h": 8,
-        "w": 12,
+        "w": 6,
         "x": 0,
         "y": 0
       },
@@ -61,7 +61,6 @@
       },
       "lines": true,
       "linewidth": 1,
-      "maxPerRow": 2,
       "nullPointMode": "null",
       "options": {
         "alertThreshold": true
@@ -80,7 +79,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "${currency}_price{tier=~\"$tier\",REPLACE_WITH_LANG=~\"$name\",type=~\"$type\",rarity=~\"$rarity\"}",
+          "expr": "${currency}_price{tier=~\"$tier\",Italian=~\"$name\",type=~\"$type\",rarity=~\"$rarity\"}",
           "instant": false,
           "interval": "",
           "intervalFactor": 1,
@@ -154,7 +153,7 @@
         "definition": "label_values(tier)",
         "description": null,
         "error": null,
-        "hide": 0,
+        "hide": 2,
         "includeAll": true,
         "label": "Tier",
         "multi": true,
@@ -213,7 +212,7 @@
           ]
         },
         "datasource": null,
-        "definition": "label_values(REPLACE_WITH_LANG)",
+        "definition": "label_values(gold_price{tier=\"5\"},Italian)",
         "description": null,
         "error": null,
         "hide": 2,
@@ -223,7 +222,7 @@
         "name": "name",
         "options": [],
         "query": {
-          "query": "label_values(REPLACE_WITH_LANG)",
+          "query": "label_values(gold_price{tier=\"5\"},Italian)",
           "refId": "StandardVariableQuery"
         },
         "refresh": 1,
@@ -311,6 +310,6 @@
   },
   "timepicker": {},
   "timezone": "",
-  "title": "Combined (REPLACE_WITH_NAT_LANG)",
+  "title": "Tier 5 (Italiano)",
   "version": 6
 }

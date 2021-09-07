@@ -310,7 +310,6 @@
   },
   "timepicker": {},
   "timezone": "",
-  "title": "Tier 1 (REPLACE_WITH_LANG_NAT)",
-  "uid": "DaRA6gZgz",
+  "title": "Tier REPLACE_WITH_TIER (REPLACE_WITH_NAT_LANG)",
   "version": 6
 }
