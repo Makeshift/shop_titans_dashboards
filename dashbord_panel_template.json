@@ -1,0 +1,26 @@
+{
+  "datasource": null,
+  "gridPos": {
+    "h": 24,
+    "w": 5,
+    "x": 0,
+    "y": 0
+  },
+  "id": 3,
+  "links": [],
+  "options": {
+    "folderId": 3,
+    "maxItems": 30,
+    "query": "REPLACE_WITH_NAT_LANG",
+    "showHeadings": false,
+    "showRecentlyViewed": false,
+    "showSearch": true,
+    "showStarred": false,
+    "tags": []
+  },
+  "pluginVersion": "8.1.2",
+  "tags": [],
+  "title": "Market Order by Tiers (REPLACE_WITH_NAT_LANG)",
+  "transparent": true,
+  "type": "dashlist"
+}
