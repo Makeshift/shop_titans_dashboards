@@ -41,21 +41,36 @@ Object.keys(languagesNat)
   });
 
 Object.keys(languagesNat)
-  .map(language => {
+  .forEach(language => {
     for (let i = 1; i <= tiers; i++) {
       outputs[`Shop Titans Market Orders (Generated)/${language}_tier${i}.json`] = findReplaceString(
         findReplaceString(
           findReplaceString(
-            require('./tier_template.json'),
-            'REPLACE_WITH_NAT_LANG',
-            languagesNat[language]
+            findReplaceString(
+              require('./tier_template.json'),
+              'REPLACE_WITH_NAT_LANG',
+              languagesNat[language]
+            ),
+            'REPLACE_WITH_LANG',
+            language
           ),
-          'REPLACE_WITH_LANG',
-          language
+          'REPLACE_WITH_TIER',
+          i
+        ), 'REPLACE_WITH_NAT_TIER', i.toString().padStart(2, '0'));
+    }
+  });
+
+Object.keys(languagesNat)
+  .forEach(language => {
+    for (let i = 1; i <= tiers; i++) {
+      outputs[`Shop Titans Market Orders (Generated)/${language}_components.json`] = findReplaceString(
+        findReplaceString(
+          require('./components_template.json'),
+          'REPLACE_WITH_NAT_LANG',
+          languagesNat[language]
         ),
-        'REPLACE_WITH_TIER',
-        i
-      );
+        'REPLACE_WITH_LANG',
+        language);
     }
   });
 
