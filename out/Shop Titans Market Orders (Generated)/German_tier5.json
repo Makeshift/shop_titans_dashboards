@@ -7,12 +7,14 @@
         "enable": true,
         "hide": true,
         "iconColor": "rgba(0, 211, 255, 1)",
-        "name": "Annotations & Alerts",
+        "name": "Events",
         "target": {
           "limit": 100,
           "matchAny": false,
-          "tags": [],
-          "type": "dashboard"
+          "tags": [
+            "German"
+          ],
+          "type": "tags"
         },
         "type": "dashboard"
       }
@@ -94,25 +96,6 @@
               {
                 "id": "displayName",
                 "value": "Normal"
-              }
-            ]
-          },
-          {
-            "matcher": {
-              "id": "byRegexp",
-              "options": "uncommon Offers"
-            },
-            "properties": [
-              {
-                "id": "color",
-                "value": {
-                  "fixedColor": "green",
-                  "mode": "fixed"
-                }
-              },
-              {
-                "id": "displayName",
-                "value": "Superior"
               }
             ]
           },
@@ -295,7 +278,7 @@
           "refId": "StandardVariableQuery"
         },
         "refresh": 1,
-        "regex": "",
+        "regex": "^(?!uncommon).*$",
         "skipUrlSync": false,
         "sort": 0,
         "type": "query"
@@ -312,7 +295,7 @@
           ]
         },
         "datasource": null,
-        "definition": "label_values(gold_price{tier=\"5\"},German)",
+        "definition": "label_values(gold_price{tier=\"5\",component=\"false\"},German)",
         "description": null,
         "error": null,
         "hide": 2,
@@ -322,13 +305,13 @@
         "name": "name",
         "options": [],
         "query": {
-          "query": "label_values(gold_price{tier=\"5\"},German)",
+          "query": "label_values(gold_price{tier=\"5\",component=\"false\"},German)",
           "refId": "StandardVariableQuery"
         },
         "refresh": 1,
         "regex": "",
         "skipUrlSync": false,
-        "sort": 0,
+        "sort": 5,
         "type": "query"
       },
       {

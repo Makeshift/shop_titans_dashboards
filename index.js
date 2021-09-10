@@ -88,7 +88,7 @@ Object.keys(languagesNat)
       languagesNat[language]
     );
     panel.gridPos = {
-      h: 20,
+      h: 23,
       w: 5,
       x: x += 5,
       y: y
@@ -96,7 +96,7 @@ Object.keys(languagesNat)
     panel.id = ++id;
     if (x === 15) {
       x = -5;
-      y += 20;
+      y += 23;
     }
     dashboardTemplate.panels.push(panel);
   }
